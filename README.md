@@ -30,4 +30,14 @@
   
   docker image rm \<img name> # remove image
   
-   docker rmi \<img name> # remove image
+  docker rmi \<img name> # remove image
+  
+  docker start \<container id>
+  
+  docker stop \<container id>
+
+
+  #-v host_path:container_path
+  #--name container name (原本為隨機產生的字串)
+  #\<img name>[:\<tag>] 同一個image可以有不同tag表示不同版本
+  docker run -p 8080:8080 -v \<host_path>:\<container_path> --name=\<container name> \<img name>[:\<tag>]
