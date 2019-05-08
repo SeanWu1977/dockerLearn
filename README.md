@@ -18,24 +18,32 @@ exit
 docker ps -a # list current active container
 
  #如果有多位使用者操作同一個容器，通常執行 exec 會比 attach 合適，因為 attach 會讓每個使用者共用同一個終端機畫面，因此造成互相牽制影響。
-docker attach \<container id>  #attach reconnect to orignal session
-docker exec -it \<container id>  #exec connect to new session
+docker attach <container id>  #attach reconnect to orignal session
+docker exec -it <container id>  #exec connect to new session
 
  #mapping container port to host port 
-docker run -p \<container port>:\<host port> \<img name>
+docker run -p <container port>:\<host port> <img name>
 
 docker rm \<container id>  # remove container
   
-docker image rm \<img name> # remove image
+docker image rm <img name> # remove image
   
-docker rmi \<img name> # remove image
+docker rmi <img name> # remove image
+
+docker stop $(docker ps -a -q)
+
+# Delete all containers
+docker rm $(docker ps -a -q)
+
+# Delete all images
+docker rmi $(docker images -q)
+
+docker start <container id>
   
-docker start \<container id>
-  
-docker stop \<container id>
+docker stop <container id>
 
  #-v host_path:container_path
  #--name container name (原本為隨機產生的字串)
- #\<img name>[:\<tag>] 同一個image可以有不同tag表示不同版本
-docker run -p 8080:8080 -v \<host_path>:\<container_path> --name=\<container name> \<img name>[:\<tag>]  
+ #<img name>[:<tag>] 同一個image可以有不同tag表示不同版本
+docker run -p 8080:8080 -v <host_path>:<container_path> --name=<container name> <img name>[:<tag>]  
 ```
