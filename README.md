@@ -24,7 +24,7 @@
 
   ###mapping container port to host port 
   
-  docker run -p 8080:8080 \<img name>
+  docker run -p \<container port>:\<host port> \<img name>
 
   docker rm \<container id>  # remove container
   
@@ -36,8 +36,12 @@
   
   docker stop \<container id>
 
-
-  #-v host_path:container_path
-  #--name container name (原本為隨機產生的字串)
-  #\<img name>[:\<tag>] 同一個image可以有不同tag表示不同版本
   docker run -p 8080:8080 -v \<host_path>:\<container_path> --name=\<container name> \<img name>[:\<tag>]
+  
+  #-v host_path:container_path
+  
+  #--name container name (原本為隨機產生的字串)
+  
+  #\<img name>[:\<tag>] 同一個image可以有不同tag表示不同版本
+  
+
