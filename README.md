@@ -25,3 +25,7 @@
   ###mapping container port to host port 
   
   docker run -p 8080:8080 \<img name>
+
+  docker rm \<container id>  # remove container
+  
+  docker image rm \<img name> # remove image
