@@ -6,17 +6,16 @@
 
   docker images #local image list
 
-  docker run <img name>   
-
-  docker run -it <img name> /bin/bash 
-  # run and ineract by tty 
+  docker run <img name> 
   
-  exit 
+  #run and interact by tty
+  docker run -it <img name> /bin/bash 
+  
   #leave container
-  #如果不要停止 container 而要退出 docker container 的terminal 需要輸入ctrl + p之後再輸入 ctrl + q 的按鍵，就不會把 container 關閉。
+  #如果不要停止 container 而要退出 docker container 的terminal 需要輸入ctrl + p之後再輸入 ctrl + q 的按鍵，就不會把 container 關閉。   
+  exit 
 
   docker ps -a # list current active container
-
 
   ###如果有多位使用者操作同一個容器，通常執行 exec 會比 attach 合適，因為 attach 會讓每個使用者共用同一個終端機畫面，因此造成互相牽制影響。
   docker attach \<container id>  #attach reconnect to orignal session
