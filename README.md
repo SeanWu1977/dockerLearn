@@ -46,4 +46,9 @@ docker stop <container id>
  #--name container name (原本為隨機產生的字串)
  #<img name>[:<tag>] 同一個image可以有不同tag表示不同版本
 docker run -p 8080:8080 -v <host_path>:<container_path> --name=<container name> <img name>[:<tag>]  
+
+docker tag <source img> <target img>[:<tag>]
+#for docker repository  
+#target img = <docker sever>:<port>/<account>/<target name>[:<tag>]
+
 ```
