@@ -55,4 +55,11 @@ docker tag <source img> <target img>[:<tag>]
 docker push <target img>
 
 docker pull <target img>
+
+docker run -d -p 5000:5000 -v /home/user1/storage:/var/lib/registry --name registry registry:2
+#-d：執行的 docker container 是 run 在背景的狀態，所以需要使用 docker logs 的指令才可以看到 log 狀態
+
+docker run -d -p 8080:8080 --name registry-web --link registry -e REGISTRY_URL=http://127.0.0.1:5000/v2 hyper/docker-registry-web
+#docker repository web gui
+
 ```
