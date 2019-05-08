@@ -16,11 +16,12 @@
 
   docker ps -a # list current active container
 
-  ###這兩個執令不知差別在那裡，都是回到 container 內
+
+  ###如果有多位使用者操作同一個容器，通常執行 exec 會比 attach 合適，因為 attach 會讓每個使用者共用同一個終端機畫面，因此造成互相牽制影響。
   
-  docker attach \<container id>
+  docker attach \<container id>  #attach reconnect to orignal session
   
-  docker exec -it \<container id> 
+  docker exec -it \<container id>  #exec connect to new session
 
   ###mapping container port to host port 
   
