@@ -29,3 +29,5 @@
   docker rm \<container id>  # remove container
   
   docker image rm \<img name> # remove image
+  
+   docker rmi \<img name> # remove image
