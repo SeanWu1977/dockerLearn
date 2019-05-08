@@ -49,6 +49,6 @@ docker run -p 8080:8080 -v <host_path>:<container_path> --name=<container name> 
 
 docker tag <source img> <target img>[:<tag>]
 #for docker repository  
-#target img = <docker sever>:<port>/<account>/<target name>[:<tag>]
+#target img = <docker sever>:<port>/<repository name>/<target name>[:<tag>]
 
 ```
