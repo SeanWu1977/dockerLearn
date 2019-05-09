@@ -63,8 +63,7 @@ docker run -d -p 8080:8080 --name registry-web --link registry -e REGISTRY_URL=h
 #docker repository web gui
 
 ```
-
-#啟用restfull : docker 18+
+# 啟用restfull : docker 18+
 
 ```
 vi /lib/systemd/system/docker.service
