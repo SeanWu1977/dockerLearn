@@ -9,6 +9,7 @@ docker images #local image list
 docker run <img name> 
 
 #--memory 限製container最多記憶體  -d 背景執行
+#--cpu-period=1000000 --cpu-quota=500000 設定CPU
 docker run --memory 512MB --name nginx3 -d nginx
   
  #run and interact by tty
