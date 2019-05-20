@@ -26,7 +26,7 @@ docker attach <container id>  #attach reconnect to orignal session
 docker exec -it <container id>  #exec connect to new session
 
  #mapping container port to host port 
-docker run -p <container port>:\<host port> <img name>
+docker run -p <host port>:\<container port> <img name>
 
 docker rm \<container id>  # remove container
   
